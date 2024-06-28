@@ -1,0 +1,379 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+         url('../fonts/Inter-Regular.woff') format('woff'),
+         url('../fonts/Inter-Regular.eot') format('eot'),
+         url('../fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+         url('../fonts/Inter-SemiBold.woff') format('woff'),
+         url('../fonts/Inter-SemiBold.eot') format('eot'),
+         url('../fonts/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AblationExtraBold';
+    src: url('../fonts/ablationextrabold.eot');
+    src: url('../fonts/ablationextrabold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ablationextrabold.woff2') format('woff2'),
+        url('../fonts/ablationextrabold.woff') format('woff'),
+        url('../fonts/ablationextrabold.ttf') format('truetype'),
+        url('../fonts/ablationextrabold.svg#ablationextrabold') format('svg');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    cursor: none; /* Скрыть стандартный курсор */
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    background: url('../images/cursor.svg') no-repeat center center;
+    background-size: contain;
+    z-index: 9999;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Меню */
+header {
+    background-color: #000;
+    height: 6vw; /* 100px при 1440px */
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5.9vw;
+}
+
+/* Левый блок навигации */
+.nav-left {
+    display: flex;
+    gap: 2.78vw;
+    align-items: center;
+}
+
+.nav-item {
+    color: #E5E5E5;
+    font-size: 1.1vw;
+    line-height: 1;
+    text-decoration: none;
+    padding-top: 1.2vw;
+}
+
+.nav-item.active {
+    color: #E8812A;
+    font-weight: 600;
+}
+
+/* Правый блок навигации */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.69vw;
+}
+
+.nav-icon {
+    color: #E5E5E5;
+    padding-top: 1.2vw;
+}
+
+/* Заголовок */
+.page-title {
+    font-family: 'AblationExtraBold', sans-serif;
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    margin-top: 9vw;
+    margin-bottom: 3.47vw;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(3vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-title {
+    opacity: 0;
+    animation: slideUp 1s forwards;
+}
+
+.season {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.6vw;
+    font-weight: 600;
+    color: #E8812A;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+
+/* Формат контента */
+.content1-section,
+.content2-section,
+.content3-section {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5.9vw;
+}
+
+.content1-container,
+.content2-container,
+.content3-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content1-container,
+.content2-container {
+    margin-bottom: 3.47vw; /* Отступ снизу 50 пикселей */
+}
+
+.content3-container {
+    margin-bottom: 1.39vw; /* Отступ снизу 20 пикселей */
+}
+
+/* Работа с текстом и кнопкой */
+.content1-details {
+    max-width: 25vw; /* Ширина текста слева */
+    padding-left: 1.4vw;
+}
+
+.content2-details {
+    max-width: 28.47vw; /* Ширина справа */
+    padding-right: 1.4vw;
+}
+
+/* Текст */
+.content-type {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: #8C8C8C;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 0.97vw;
+}
+
+.content-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.9vw;
+    font-weight: 600;
+    color: #1A1A1A;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2.1vw;
+}
+
+.content-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 400;
+    color: #1A1A1A;
+    line-height: 1.4;
+    text-align: left;
+}
+
+
+/* Кнопка */
+.content-button {
+    display: inline-block;
+    width: 14.86vw;
+    height: 4.17vw;
+    background-color: #292929;
+    color: white;
+    text-decoration: none;
+    margin-top: 2.1vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1vw;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    line-height: 4.17vw;
+}
+
+.content-button:hover,
+.content-button:active {
+    background-color: #E8812A;
+}
+
+/* Фреймы */
+.content1-image-container {
+    width: 58.3vw;
+    height: 28.5vw;
+    overflow: hidden;
+}
+
+.content1-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content1-image:hover {
+    transform: scale(1.1);
+}
+
+.content2-image-container {
+    display: flex;
+    gap: 1.39vw;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    align-items: center;
+}
+
+.content2-image-wrapper {
+    width: 28.47vw;
+    height: 15.97vw;
+    overflow: hidden;
+}
+
+.content3-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.53vw;
+}
+
+.content3-image-wrapper {
+    width: 43.33vw;
+    height: 28.5vw;
+    overflow: hidden;
+}
+
+.content2-image,
+.content3-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content2-image-wrapper:hover .content2-image,
+.content3-image-wrapper:hover .content3-image {
+    transform: scale(1.1);
+}
+
+/* Поп-ап */
+.popup {
+    display: none;
+    position: fixed; 
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(41, 41, 41, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 28vw;
+    height: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content .content-description {
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+/* Подвал и форма */
+footer {
+    background-color: #000;
+    padding-top: 6.94vw;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2.08vw;
+}
+
+.footer-text {
+    font-size: 1.88vw;
+    font-weight: 400;
+    color: #E5E5E5;
+    line-height: 1.4;
+}
+
+.input-container {
+    margin-top: 2.08vw;
+    display: flex;
+    justify-content: center;
+    gap: 1.39vw;
+}
+
+.footer-input {
+    width: 20.83vw;
+    height: 4.17vw;
+    background-color: #242424;
+    border: 1px solid #656565;
+    color: #E5E5E5;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+.footer-button {
+    width: 20.83vw;
+    height: 4.17vw;
+    background-color: #E8812A;
+    border: none;
+    color: #FFF;
+    font-size: 1.1vw;
+    cursor: pointer;
+}
+
+.footer-links {
+    margin-top: 4.17vw;
+    display: flex;
+    justify-content: center;
+    gap: 2.08vw;
+    color: #E5E5E5;
+    font-size: 1.1vw;
+}
+
+.footer-links span:hover {
+    color: #E8812A;
+}
+
+.footer-logo {
+    margin-top: 4.17vw;
+    margin-bottom: 6.94vw;
+    height: 3.19vw;
+    width: auto;
+}

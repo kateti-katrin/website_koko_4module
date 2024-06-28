@@ -1,0 +1,74 @@
+body.index-page {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+}
+
+.logo-container {
+    margin-top: 7vw;
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 1s forwards;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mars-image {
+    position: absolute;
+    width: 71.94vw; /* 1036px converted to vw */
+    max-height: 55.56vw; /* 800px converted to vw */
+    height: auto;
+    left: 50%;
+    top: 6.25vw; /* 90px converted to vw */
+    transform: translateX(-50%);
+    z-index: 0;
+    animation: rotate 60s linear infinite; /* Apply rotation animation */
+}
+
+
+.text-container {
+    position: absolute;
+    top: calc(6.25vw + 65%);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.9vw;
+    font-weight: 400;
+    color: #E5E5E5;
+    line-height: 1.4;
+    width: 33.33vw;
+    z-index: 2;
+}
+
+/* SlideUp keyframes animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(3vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rotate keyframes animation */
+@keyframes rotate {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}

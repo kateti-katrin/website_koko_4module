@@ -1,0 +1,64 @@
+/* Баннер */
+.banner-section {
+    padding: 0 5.9vw;
+}
+
+.banner-container {
+    margin-top: 9vw;
+    margin-bottom: 1.39vw; /* Отступ снизу 20 пикселей */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 28.5vw;
+    object-fit: cover; /* Сохранение пропорций изображения */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .banner-image:hover {
+    transform: scale(1.1);
+} */
+
+/* Постеры */
+.poster {
+    padding: 0 5.9vw;
+    margin-top: 5vw;
+    
+}
+
+.poster-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.39vw;
+}
+
+.poster-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.39vw;
+}
+
+.poster-wrapper {
+    width: 28.47vw;
+    height: 40.28vw;
+    overflow: hidden;
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.poster-wrapper:hover .poster-image {
+    transform: scale(0.9); /* Уменьшение изображения при наведении */
+}
+
+/* Кнопка */
+.button-container {
+    margin-bottom: 5.9vw;
+    display: flex;
+    justify-content: center; /* Центрирование кнопки */
+}
